@@ -3,8 +3,6 @@
 ## Introduction
 This is the official code repository for the paper "Modality Plug-and-Play: Elastic Modality Adaptation in Multimodal LLMs for Embodied AI". We present mPnP-LLM to enable fully elastic modality adaptation for LLMs via trainable latent connctions. We evaluate the performance of mPnP-LLM on a mini-split of nuScenes-QA dataset with two sensory modalities: RGB camera views and LiDAR point clouds.
 
-* The current code for dataset creation looks messy and needs to be cleaned up. Please stay tuned for a clean release!
-
 ## Requirements
 Install pytorch first and then install nuscenes-devkit with
 ```
@@ -24,13 +22,15 @@ The dataset we used in our experiments is adapted from the [nuScenes-QA dataset 
 
 * Navigate to `nuqamini` folder and run `mini_lidar_dataset_creator.py` to generate range projection of the LiDAR point cloud.
 
-* Navigate to `nuqamini` folder and run `nuqamini_dataset_create.ipynb`. Four data split will be created in Arrow format in the directories:
+* Navigate to `nuqamini` folder and run `nuqamini_dataset_create.ipynb`. Four data splits will be created in Arrow format in the directories:
     ```
     day/train/
     day/validation/
     night_80dimgaussian7/train/
     night_80dimgaussian7/validation/
     ```
+
+We are preparing to release the processed datasets.
 
 ## Prepare encoders
 We use ViT-small for RGB camera views, which will be automatically downloaded when you run our training code. But we also need a pre-trained [RangeViT](https://github.com/valeoai/rangevit) to percieve the LiDAR inputs. Please download the pre-trained RangeViT [here](https://github.com/valeoai/rangevit/releases/download/v1/model_nuscenes_cs_init.pth) and put the downloaded model file under `model/`.

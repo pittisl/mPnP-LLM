@@ -1,7 +1,7 @@
 # Modality Plug-and-Play: Elastic Modality Adaptation in Multimodal LLMs for Embodied AI
 
 ## Introduction
-This is the official code repository for the paper "Modality Plug-and-Play: Elastic Modality Adaptation in Multimodal LLMs for Embodied AI". We present mPnP-LLM to enable fully elastic modality adaptation for LLMs via trainable latent connctions. We evaluate the performance of mPnP-LLM on a mini-split of nuScenes-QA dataset with two sensory modalities: RGB camera views and LiDAR point clouds.
+This is the official code repository for the paper ["Modality Plug-and-Play: Elastic Modality Adaptation in Multimodal LLMs for Embodied AI"](https://arxiv.org/abs/2312.07886). We present mPnP-LLM to enable fully elastic modality adaptation for LLMs via trainable latent connctions. We evaluate the performance of mPnP-LLM on a mini-split of nuScenes-QA dataset with two sensory modalities: RGB camera views and LiDAR point clouds.
 
 ## Requirements
 Install pytorch first and then install nuscenes-devkit with
@@ -49,3 +49,13 @@ Alternatively, we can include both **RGB and LiDAR modalities**:
 python add_lidar.py
 ```
 Since we generate a relatively small dataset for training and validation, the obtained accuracy may have small variations due to randomness.
+
+## Citation
+```
+@article{huang2023modality,
+  title={Modality Plug-and-Play: Elastic Modality Adaptation in Multimodal LLMs for Embodied AI},
+  author={Huang, Kai and Yang, Boyuan and Gao, Wei},
+  journal={arXiv preprint arXiv:2312.07886},
+  year={2023}
+}
+```

@@ -30,10 +30,10 @@ The dataset we used in our experiments is adapted from the [nuScenes-QA dataset 
     night_80dimgaussian7/validation/
     ```
 
-We are preparing to release the processed datasets.
+**Alternatively**, you could download our processed dataset from huggingface. Check the dataset page [here](https://huggingface.co/datasets/KevinNotSmile/nuscenes-qa-mini).
 
 ## Prepare encoders
-We use ViT-small for RGB camera views, which will be automatically downloaded when you run our training code. But we also need a pre-trained [RangeViT](https://github.com/valeoai/rangevit) to percieve the LiDAR inputs. Please download the pre-trained RangeViT [here](https://github.com/valeoai/rangevit/releases/download/v1/model_nuscenes_cs_init.pth) and put the downloaded model file under `model/`.
+We use ViT-small for RGB camera views, which will be automatically downloaded when you run our training code. But we also need a pre-trained [RangeViT](https://github.com/valeoai/rangevit) to perceive the LiDAR inputs. Please download the pre-trained RangeViT [here](https://github.com/valeoai/rangevit/releases/download/v1/model_nuscenes_cs_init.pth) and put the downloaded model file under `model/`.
 
 ## Running Modality Adaptation
 Navigate to `example/mpnp_llm/`. We first do offline training with **RGB modality** on day-train split and evaluate on both day-validation split and night-validation split:
